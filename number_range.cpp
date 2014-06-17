@@ -7,7 +7,7 @@ number_range_iterator::number_range_iterator (const number_range* tgt, int pos):
 {
 }
 
-const number_range_iterator& 
+const number_range_iterator&
 number_range_iterator::operator++ ()
 {
     _pos = _tgt->increment(_pos);
@@ -21,7 +21,7 @@ number_range_iterator::operator* () const
     return _pos;
 }
 
-bool 
+bool
 number_range_iterator::operator != (const number_range_iterator& other) const
 {
     return (_pos != other._pos);
@@ -30,15 +30,15 @@ number_range_iterator::operator != (const number_range_iterator& other) const
 /// @}
 
 
-/// @{ number_range implementation 
+/// @{ number_range implementation
 
-const int 
+int
 number_range::last() const
 {
     return (_end - ((_end - _start) % _step));
 }
 
-int 
+int
 number_range::increment(int current) const
 {
     int next = current + _step;
@@ -49,13 +49,13 @@ number_range::increment(int current) const
     return current;
 }
 
-number_range_iterator 
+number_range_iterator
 number_range::begin () const
 {
     return number_range_iterator(this, _start);
 }
 
-number_range_iterator 
+number_range_iterator
 number_range::end () const
 {
     return number_range_iterator(this, last());
