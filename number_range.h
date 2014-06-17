@@ -24,7 +24,7 @@ class number_range_iterator
         const number_range* _tgt;
 };
 
-/** this class is an iterable object that generates a sequence of numbers 
+/** this class is an iterable object that generates a sequence of numbers
  * example usage:
  * for (auto i : number_range(100))
  *  // i will be a sequence of ints from 0 to 99
@@ -39,7 +39,7 @@ class number_range
 
         number_range_iterator begin () const;
         number_range_iterator end () const;
-        const int last() const;
+        int last() const;
         int increment(int current) const;
 
     private:
