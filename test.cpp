@@ -1,7 +1,8 @@
 #include <iostream>
 
-#include "number_range.h"
+/// \file test.cpp example uses of the number_range iterator.
 
+#include "number_range.h"
 
 int
 main(int argc, const char *argv[])
@@ -29,17 +30,9 @@ main(int argc, const char *argv[])
         if (i_check>10)
         {
             std::cerr << "broke" << std::endl;
-            break;
+            return 1;
         }
     }
-
-    // invalid: no float modulo (use fmod)?
-//    auto t = 0.0f;
-//    const static float EPSILON = 0.01f;
-//    for (auto i : number_range<float>(0.0f, 5.0f, 0.25f))
-//    {
-
-//    }
 
     std::cerr << "-------" << std::endl;
 

@@ -1,7 +1,10 @@
 #include "number_range.h"
 
 /// @{ number_range_iterator implementation
-number_range_iterator::number_range_iterator (const number_range* tgt, int pos):
+number_range_iterator::number_range_iterator (
+        const number_range* tgt,
+        int pos
+):
     _pos(pos),
     _tgt(tgt)
 {
@@ -22,7 +25,9 @@ number_range_iterator::operator* () const
 }
 
 bool
-number_range_iterator::operator != (const number_range_iterator& other) const
+number_range_iterator::operator != (
+        const number_range_iterator& other
+) const
 {
     return (_pos != other._pos);
 }
@@ -44,7 +49,9 @@ number_range::increment(int current) const
     int next = current + _step;
 
     if (next <= _end)
+    {
         return next;
+    }
 
     return current;
 }

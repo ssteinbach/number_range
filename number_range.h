@@ -1,5 +1,5 @@
-#ifndef number_RANGE_H
-#define number_RANGE_H
+#ifndef __NUMBER_RANGE_H__
+#define __NUMBER_RANGE_H__
 
 /** \file number_range.h python style range() function for C++11
  *  \author stephan steinbach
@@ -16,7 +16,7 @@ class number_range_iterator
 
         // operators
         bool operator != (const number_range_iterator& other) const;
-        int    operator * () const;
+        int  operator *  ()                                   const;
         const number_range_iterator& operator++ ();
 
     private:
@@ -47,4 +47,4 @@ class number_range
 };
 
 
-#endif /* end of include guard: number_RANGE_H */
+#endif /* end of include guard: __NUMBER_RANGE_H__ */
