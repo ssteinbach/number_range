@@ -36,9 +36,9 @@ example usage
 
 For a lengthier examples, see test.cpp.  The basic calls are:
 ```cpp
-number_range(end) // start=0, stride=1
-number_range(start, end) // stride=1
-number_range(start, end, stride)
+number_range(end); // start=0, stride=1
+number_range(start, end); // stride=1
+number_range(start, end, stride);
 ```
 
 Or a bigger example block:
