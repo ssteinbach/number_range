@@ -22,7 +22,7 @@ def build(bld):
     # test program
     bld.program(
         source=['test.cpp'],
-        target='test_numeric_range',
+        target='test_number_range',
         includes=[],
         cxxflags=['-g'],
         lib=[],
