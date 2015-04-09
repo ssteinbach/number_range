@@ -1,12 +1,16 @@
 #! /usr/bin/env python
 
-""" wscript for the integer_range library"""
+""" wscript for the number_range library"""
 
 def options(opt):
     opt.load('compiler_cxx')
 
 def configure(conf):
     conf.load('compiler_cxx')
+    conf.env.append_unique(
+        'CXXFLAGS',
+        ['-std=c++11']
+    )
 
 def build(bld):
     # numeric range library
